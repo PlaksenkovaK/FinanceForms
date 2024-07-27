@@ -1,0 +1,122 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Configurations>Debug;Release;DEMO</Configurations>
+    <ApplicationIcon>icons\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DEMO|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons\account_balance_wallet_48dp_FILL0_wght400_GRAD0_opsz48.png" />
+    <None Remove="icons\account_circle_40dp.png" />
+    <None Remove="icons\add_brown.png" />
+    <None Remove="icons\add_white.png" />
+    <None Remove="icons\analytics_40dp.png" />
+    <None Remove="icons\article_40dp.png" />
+    <None Remove="icons\close_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\close_brown.png" />
+    <None Remove="icons\close_white.png" />
+    <None Remove="icons\dashboard_40dp.png" />
+    <None Remove="icons\dataset_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\delete_40dp.png" />
+    <None Remove="icons\delete_brown.png" />
+    <None Remove="icons\delete_forever_40dp.png" />
+    <None Remove="icons\description_40dp.png" />
+    <None Remove="icons\face_40dp.png" />
+    <None Remove="icons\help_40dp.png" />
+    <None Remove="icons\home_40dp.png" />
+    <None Remove="icons\home_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\home_brown.png" />
+    <None Remove="icons\icon.ico" />
+    <None Remove="icons\info_40dp.png" />
+    <None Remove="icons\login_40dp.png" />
+    <None Remove="icons\logout_40dp.png" />
+    <None Remove="icons\logout_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\menu_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\menu_brown.png" />
+    <None Remove="icons\more_horiz_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\open_in_new_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\page_control_brown.png" />
+    <None Remove="icons\person_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\pin_40dp.png" />
+    <None Remove="icons\search_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\search_brown.png" />
+    <None Remove="icons\settings_40dp.png" />
+    <None Remove="icons\settings_40dp_FILL0_wght400_GRAD0_opsz40.png" />
+    <None Remove="icons\settings_brown.png" />
+    <None Remove="icons\settings_White.png" />
+    <None Remove="icons\today_40dp.png" />
+    <None Remove="icons\view_list_40dp.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icons\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="icons\account_balance_wallet_48dp_FILL0_wght400_GRAD0_opsz48.png" />
+    <EmbeddedResource Include="icons\account_circle_40dp.png" />
+    <EmbeddedResource Include="icons\add_brown.png" />
+    <EmbeddedResource Include="icons\add_white.png" />
+    <EmbeddedResource Include="icons\analytics_40dp.png" />
+    <EmbeddedResource Include="icons\article_40dp.png" />
+    <EmbeddedResource Include="icons\close_brown.png" />
+    <EmbeddedResource Include="icons\close_white.png" />
+    <EmbeddedResource Include="icons\dashboard_40dp.png" />
+    <EmbeddedResource Include="icons\delete_40dp.png" />
+    <EmbeddedResource Include="icons\delete_brown.png" />
+    <EmbeddedResource Include="icons\delete_forever_40dp.png" />
+    <EmbeddedResource Include="icons\description_40dp.png" />
+    <EmbeddedResource Include="icons\face_40dp.png" />
+    <EmbeddedResource Include="icons\help_40dp.png" />
+    <EmbeddedResource Include="icons\home_40dp.png" />
+    <EmbeddedResource Include="icons\home_brown.png" />
+    <EmbeddedResource Include="icons\icon.ico" />
+    <EmbeddedResource Include="icons\info_40dp.png" />
+    <EmbeddedResource Include="icons\login_40dp.png" />
+    <EmbeddedResource Include="icons\logout_40dp.png" />
+    <EmbeddedResource Include="icons\menu_brown.png" />
+    <EmbeddedResource Include="icons\page_control_brown.png" />
+    <EmbeddedResource Include="icons\pin_40dp.png" />
+    <EmbeddedResource Include="icons\search_brown.png" />
+    <EmbeddedResource Include="icons\settings_40dp.png" />
+    <EmbeddedResource Include="icons\settings_brown.png" />
+    <EmbeddedResource Include="icons\settings_White.png" />
+    <EmbeddedResource Include="icons\today_40dp.png" />
+    <EmbeddedResource Include="icons\view_list_40dp.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiveCharts.WinForms.NetCore3" Version="0.9.8" />
+    <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
